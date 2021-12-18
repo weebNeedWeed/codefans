@@ -1,0 +1,41 @@
+@import "../../theme";
+
+@keyframes myAnimation {
+  from {
+    width: 0;
+  }
+
+  33% {
+    width: 30vw;
+  }
+
+  50% {
+    width: 50vw;
+  }
+
+  90% {
+    width: 90vw;
+  }
+
+  95% {
+    width: 95vw;
+  }
+
+  100% {
+    width: 100vw;
+  }
+}
+
+.progress-bar {
+  width: 0;
+  position: fixed;
+  height: 5px;
+  left: 0;
+  background-color: #E84A5F;
+  z-index: 10001;
+  animation-name: myAnimation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  border-radius: 6px;
+}

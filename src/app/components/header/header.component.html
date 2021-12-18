@@ -1,0 +1,9 @@
+<header class="header">
+  <h3 class="header__hello">Hi Bro!</h3>
+  <div class="header__info">
+    <p class="default">Blog này có </p>
+    <p class="text">{{writingText}}</p>
+    <p class="cs" [class.cs--stop]="!isStopping">|</p>
+  </div>
+  <button class="header__button" (click)="onClick()">Bắt đầu</button>
+</header>

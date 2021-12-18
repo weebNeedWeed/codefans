@@ -1,0 +1,13 @@
+@import "../../theme";
+
+.footer {
+  margin-top: 120px;
+  border-top: 4px solid #018ABE;
+  text-align: center;
+  padding: 60px 0;
+
+  &__copyright {
+    color: $blue1;
+    font-size: 30px;
+  }
+}

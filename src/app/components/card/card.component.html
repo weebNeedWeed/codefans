@@ -1,0 +1,12 @@
+<div class="card" [ngStyle]="styles.card">
+  <div class="card__image" [ngStyle]="styles.image"></div>
+  <div class="card__content">
+    <div class="card__info">
+      <p class="card__author">Đăng bởi: Admin</p>
+      <p class="card__createdAt">{{createdAt | localeDate}}</p>
+    </div>
+
+    <a class="card__title" [routerLink]="['/post', createdAt, slug]">{{title}}</a>
+    <p class="card__description">{{description}}</p>
+  </div>
+</div>

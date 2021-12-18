@@ -1,1 +1,18 @@
-<p>home works!</p>
+<app-header [scrollTo]="start"></app-header>
+
+<div class="row justify-content-md-center" #start>
+  <div class="col col-lg-9">
+    <app-box title="Mới nhất">
+      <app-card *ngFor="let post of newestPosts" [title]="post.name" [description]="post.description"
+        [imageUrl]="post.imageUrl" [createdAt]="post.createdAt" [slug]="post.slug">
+      </app-card>
+
+      <div style="text-align: center;margin-top:40px;">
+        <a routerLink="/" class="show-more">Hiển thị thêm</a>
+      </div>
+    </app-box>
+  </div>
+  <div class="col col-lg-3">
+    <app-box title="Coming soon"></app-box>
+  </div>
+</div>

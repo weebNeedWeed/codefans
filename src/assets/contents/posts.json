@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "id": 0,
+    "slug": "lorem-ipsum",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "categoryId": 1,
+    "createdAt": 1639638586000,
+    "imageUrl": "https://image.freepik.com/free-vector/people-with-technology-devices_52683-34717.jpg"
+  },
+  {
+    "name": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "id": 1,
+    "slug": "lorem-ipsum-amet",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "categoryId": 0,
+    "createdAt": 1639577335000,
+    "imageUrl": ""
+  }
+]

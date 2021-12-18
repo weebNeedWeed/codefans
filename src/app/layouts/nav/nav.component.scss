@@ -1,5 +1,6 @@
 @import "../../theme";
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:wght@400;500;700&display=swap');
+
 .nav {
   background-color: rgba($color: $blue4, $alpha: 0.5);
   width: 100vw;
@@ -7,13 +8,14 @@
   top: 0;
   left: 0;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
-  padding-left:60px;
+  padding-left: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
+  z-index: 10000;
 
-  &__logo{
+  &__logo {
     border: 3px solid rgba(255, 255, 255, 0.8);
     border-radius: 4px;
     height: 50px;
@@ -28,7 +30,7 @@
     margin: 0;
     padding: 0;
     justify-content: flex-start;
-    margin-right: 120px;
+    margin-right: 60px;
   }
 
   &__link {
@@ -42,6 +44,7 @@
   &__menu-item {
     padding: 0;
     margin: 0;
+
     &:not(:last-child) {
       margin-right: 55px;
     }
@@ -51,15 +54,15 @@
     }
   }
 
-  &__underline{
+  &__underline {
     height: 2px;
     width: 0;
     background-color: #fff;
-    display:block;
+    display: block;
     border-radius: 4px;
     transition: all .3s;
   }
-  
+
   &__button {
     padding: 10px 12px;
     color: $blue1;
@@ -68,22 +71,24 @@
     font-size: 20px;
     border-radius: 6px;
     transition: all .3s;
-    
+
     &:hover {
       background-color: $blue1;
-      color: $blue5;;
+      color: $blue5;
+      ;
     }
   }
 }
 
-.code,.fans {
+.code,
+.fans {
   display: inline;
   font-family: 'Abril Fatface', 'Roboto', sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: normal;
   text-transform: uppercase;
-  line-height: 50px;
+  line-height: 45px;
 }
 
 .code {
@@ -93,4 +98,3 @@
 .fans {
   color: $blue1;
 }
-

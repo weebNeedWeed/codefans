@@ -1,6 +1,10 @@
 @import "./theme";
 
-.container {
+html {
+  scroll-behavior: smooth;
+}
+
+.app-container {
   padding: 0 60px;
   padding-top: 100px;
   background-color: $blue5;
