@@ -26,16 +26,44 @@
   }
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .progress-bar {
-  width: 0;
+  width: 100vw;
   position: fixed;
   height: 5px;
   left: 0;
   background-color: #E84A5F;
   z-index: 10001;
   animation-name: myAnimation;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
   border-radius: 6px;
+}
+
+.spinner {
+  animation-name: spin;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  border-radius: 6px;
+  color: #E84A5F;
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  z-index: 10001;
+  right: 3px;
+  top: 3px;
 }

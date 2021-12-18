@@ -5,4 +5,5 @@ export interface Post {
   categoryId: number;
   createdAt: number;
   imageUrl: string;
+  id: number;
 }

@@ -21,8 +21,11 @@
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
     "@ng-bootstrap/ng-bootstrap": "^10.0.0",
+    "@types/showdown": "^1.9.4",
     "bootstrap": "^4.5.0",
+    "ng-bootstrap-icons": "^13.1.2-canary.1",
     "rxjs": "~6.6.0",
+    "showdown": "^1.9.1",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

@@ -1,1 +1,15 @@
-<p>post works!</p>
+<div class="wrapper">
+  <h2 class="post-title">{{postTitle}}</h2>
+
+  <div class="row justify-content-md-center" #start>
+    <div class="col col-lg-9">
+      <app-box [title]="'Admin' + ' - ' + (createdAt | localeDate)">
+        <div class="post-content" [innerHtml]="postContent">
+        </div>
+      </app-box>
+    </div>
+    <div class="col col-lg-3">
+      <app-box title="Coming soon"></app-box>
+    </div>
+  </div>
+</div>

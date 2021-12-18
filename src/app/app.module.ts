@@ -1,3 +1,4 @@
+import { IconsModule } from './icons/icons.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -32,6 +33,7 @@ import { ProgressBarComponent } from './layouts/progress-bar/progress-bar.compon
     BrowserAnimationsModule,
     NgbModule,
     HttpClientModule,
+    IconsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
