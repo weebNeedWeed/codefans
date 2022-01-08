@@ -62,3 +62,45 @@
     transform: translateY(-3px);
   }
 }
+
+
+@media only screen and (max-width: 768px) {
+  .card {
+    height: 150px;
+
+    &__info,
+    &__description {
+      display: none;
+    }
+
+    &__title {
+      font-size: 18px;
+    }
+
+    &__image {
+      flex-basis: 35%;
+    }
+
+    &__content {
+      flex-basis: 65%;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .card {
+    height: 100px;
+
+    &__image {
+      flex-basis: 30%;
+    }
+
+    &__content {
+      flex-basis: 70%;
+    }
+
+    &__title {
+      font-size: 12px;
+    }
+  }
+}

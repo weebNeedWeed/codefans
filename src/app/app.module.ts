@@ -14,6 +14,8 @@ import { CardComponent } from './components/card/card.component';
 import { LocaleDatePipe } from './pipes/locale-date.pipe';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { ProgressBarComponent } from './layouts/progress-bar/progress-bar.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MobileNavComponent } from './layouts/mobile-nav/mobile-nav.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { ProgressBarComponent } from './layouts/progress-bar/progress-bar.compon
     LocaleDatePipe,
     FooterComponent,
     ProgressBarComponent,
+    MobileNavComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +37,7 @@ import { ProgressBarComponent } from './layouts/progress-bar/progress-bar.compon
     NgbModule,
     HttpClientModule,
     IconsModule,
+    LayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

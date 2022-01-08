@@ -10,3 +10,9 @@
   margin-bottom: 75px;
   font-size: 200%;
 }
+
+@media only screen and (max-width: 480px) {
+  .post-title {
+    font-size: 150%;
+  }
+}

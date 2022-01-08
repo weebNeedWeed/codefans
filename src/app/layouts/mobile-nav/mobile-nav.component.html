@@ -1,0 +1,34 @@
+<nav class="nav" [class.nav--scroll-down]="isScrollingDown">
+  <a routerLink="/" class="nav__logo">
+    <p class="code">Code</p>
+    <p class="fans">Fans</p>
+  </a>
+
+  <bi name="list" class="nav__menu-icon" (click)="onClick()"></bi>
+
+  <div (click)="onClick()" class="nav__shadow" [style.display]="show ? 'block' : 'none'"></div>
+
+  <div class="nav__box" [class.nav__box--active]="show">
+    <ul class="nav__menu">
+      <li class="nav__menu-item">
+        <a routerLink="/" class="nav__link">Trang chủ</a>
+        <div class="nav__underline"></div>
+      </li>
+      <li class="nav__menu-item">
+        <a routerLink="/" class="nav__link">Tìm kiếm</a>
+        <div class="nav__underline"></div>
+      </li>
+      <li class="nav__menu-item">
+        <a routerLink="/" class="nav__link">Hướng dẫn</a>
+        <div class="nav__underline"></div>
+      </li>
+      <li class="nav__menu-item">
+        <a routerLink="/" class="nav__link">Về tác giả</a>
+        <div class="nav__underline"></div>
+      </li>
+      <li class="nav__menu-item">
+        <a routerLink="/posts" class="nav__button">Bài viết</a>
+      </li>
+    </ul>
+  </div>
+</nav>

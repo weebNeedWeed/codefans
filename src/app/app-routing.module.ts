@@ -1,3 +1,4 @@
+import { PostsComponent } from './pages/posts/posts.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { PostComponent } from './pages/post/post.component';
 import { NgModule } from '@angular/core';
@@ -13,6 +14,10 @@ const routes: Routes = [
   {
     path: 'post/:createdAt/:slug',
     component: PostComponent,
+  },
+  {
+    path: 'posts',
+    component: PostsComponent,
   },
   {
     path: '404',
@@ -34,4 +39,5 @@ export const routingComponents = [
   HomeComponent,
   PostComponent,
   NotFoundComponent,
+  PostsComponent,
 ];

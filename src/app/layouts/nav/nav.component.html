@@ -1,4 +1,4 @@
-<nav class="nav">
+<nav class="nav" [class.nav--scroll-down]="isScrollingDown">
   <a routerLink="/" class="nav__logo">
     <p class="code">Code</p>
     <p class="fans">Fans</p>
@@ -22,7 +22,7 @@
       <div class="nav__underline"></div>
     </li>
     <li class="nav__menu-item">
-      <a routerLink="/" class="nav__button">Bài viết</a>
+      <a routerLink="/posts" class="nav__button">Bài viết</a>
     </li>
   </ul>
 </nav>

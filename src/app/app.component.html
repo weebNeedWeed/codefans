@@ -1,8 +1,12 @@
 <app-progress-bar></app-progress-bar>
-<app-nav></app-nav>
+
+<app-nav *ngIf="!isMobile; else mobileNav"></app-nav>
+
+<ng-template #mobileNav>
+  <app-mobile-nav></app-mobile-nav>
+</ng-template>
 
 <div class="app-container">
   <router-outlet></router-outlet>
-
   <app-footer></app-footer>
 </div>

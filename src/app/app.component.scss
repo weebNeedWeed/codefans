@@ -9,3 +9,10 @@ html {
   padding-top: 100px;
   background-color: $blue5;
 }
+
+@media only screen and (max-width: 1024px) {
+  .app-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

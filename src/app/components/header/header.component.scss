@@ -45,3 +45,28 @@
 .default {
   display: inline
 }
+
+@media only screen and (max-width: 600px) {
+  .default {
+    display: block;
+  }
+
+  .header {
+    &__hello {
+      font-size: 40px;
+    }
+
+    &__info {
+      font-size: 30px;
+    }
+
+    &__button {
+      padding: 10px 30px;
+    }
+  }
+
+  .cs,
+  .text {
+    font-size: 30px;
+  }
+}

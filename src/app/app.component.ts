@@ -1,5 +1,5 @@
 import { ProgressBarService } from './services/progress-bar-service.service';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   NavigationCancel,
   NavigationEnd,
@@ -8,34 +8,52 @@ import {
   Router,
   Event,
 } from '@angular/router';
+import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  isMobile: boolean = false;
+
   constructor(
     private router: Router,
-    private progressBarService: ProgressBarService
-  ) {
+    private progressBarService: ProgressBarService,
+    private breakpointObserver: BreakpointObserver
+  ) {}
+
+  ngOnInit(): void {
     this.router.events.subscribe((event: Event) => {
       switch (true) {
         case event instanceof NavigationStart: {
           this.progressBarService.setStatus(true);
-          break;
+          return;
         }
 
-        case event instanceof NavigationEnd:
         case event instanceof NavigationCancel:
+        case event instanceof NavigationEnd:
         case event instanceof NavigationError: {
-          setTimeout(() => this.progressBarService.setStatus(false), 2000);
-          break;
-        }
-        default: {
-          break;
+          setTimeout(() => {
+            this.progressBarService.setStatus(false);
+          }, 2000);
+          return;
         }
       }
     });
+
+    this.breakpointObserver
+      .observe(['(max-width: 860px)'])
+      .subscribe((state: BreakpointState) => {
+        // Not matched => PC => not mobile
+        if (!state.matches) {
+          this.isMobile = false;
+          return;
+        }
+
+        // Matched => is Mobile
+        this.isMobile = true;
+      });
   }
 }

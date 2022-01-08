@@ -27,8 +27,6 @@ export class PostComponent implements OnInit {
       const createdAt = +(params.get('createdAt') ?? '-1');
       const slug = params.get('slug') ?? '';
 
-      console.log(createdAt, slug);
-
       if (isNaN(createdAt) || createdAt === -1 || !slug) {
         this.router.navigate(['404']);
         return;
