@@ -34,7 +34,7 @@ export class ContentService {
   }
 
   getPostContent(id: number): Observable<string> {
-    return this.http.get('assets/contents/posts/post' + id + '.md', {
+    return this.http.get('assets/contents/posts/post' + id + '.json', {
       responseType: 'text',
     });
   }
