@@ -17,6 +17,11 @@ jobs:
 
       - run: npm install
       - run: npm run build
+      
+      - name: copy index.html
+        run: |
+          cd ./dist/codefans-blog
+          cp index.html 404.html
 
       - name: Install SSH key
         uses: shimataro/ssh-key-action@v2
