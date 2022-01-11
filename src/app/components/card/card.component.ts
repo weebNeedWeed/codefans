@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-card',
@@ -26,6 +27,10 @@ export class CardComponent implements OnInit {
 
   styles: any = {};
 
+  isMobile: boolean = false;
+
+  constructor(public breakpointObserver: BreakpointObserver) {}
+
   ngOnInit(): void {
     this.styles.image = {
       'background-image': `url("${this.imageUrl}")`,
@@ -33,5 +38,14 @@ export class CardComponent implements OnInit {
     this.styles.card = {
       'margin-bottom': !this.isLast ? '30px' : 0,
     };
+
+    this.breakpointObserver
+      .observe(['(max-width: 480px)'])
+      .subscribe((state: BreakpointState) => {
+        // If state.matches === true => mobile screen
+        this.styles.card = {
+          'margin-bottom': !this.isLast ? (state.matches ? '10px' : '30px') : 0,
+        };
+      });
   }
 }
