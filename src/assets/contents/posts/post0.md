@@ -22,16 +22,16 @@ Vì tác giả build bằng python 3.8 (nhưng mình test 3.6 vẫn thấy chạ
 
 Sau khi máy đã có python, ta tiến hành clone source code trên github về.
 
-    ```sh
-    git clone https://github.com/aapatre/Automatic-Udemy-Course-Enroller-GET-PAID-UDEMY-COURSES-for-FREE.git
-    cd Automatic-Udemy-Course-Enroller-GET-PAID-UDEMY-COURSES-for-FREE
-    ```
+```sh
+git clone https://github.com/aapatre/Automatic-Udemy-Course-Enroller-GET-PAID-UDEMY-COURSES-for-FREE.git
+cd Automatic-Udemy-Course-Enroller-GET-PAID-UDEMY-COURSES-for-FREE
+```
 
 Clone rồi thì install mấy cái thư viện về mới dùng được.
 
-    ```sh
-    pip install -r requirements.txt
-    ```
+```sh
+pip install -r requirements.txt
+```
 
 Các bạn chờ tí cho nó tải. Sau khi install xong, các bạn quan tâm cho mình các file như:
 
@@ -49,16 +49,16 @@ python udemy_enroller.py --help
 
 Có 2 option mình nghĩ là nó hữu ích nhất:
 
-    ```sh
-    --browser <tên browser>: tham số quyết định xem trình duyệt nào sẽ được mở khi chạy chương trình. <Tên browser> có thể là edge, chrome, firefox, internet_explorer, ie, chromium, google-chrome, opera, ff (Firefox not lửa-mà-ai-cũng-biết-là-lửa-gì)
-    --max-pages <MAX_PAGES>: quyết định bao nhiêu trang sẽ được crawl.
-    ```
+```sh
+--browser <tên browser>: tham số quyết định xem trình duyệt nào sẽ được mở khi chạy chương trình. <Tên browser> có thể là edge, chrome, firefox, internet_explorer, ie, chromium, google-chrome, opera, ff (Firefox not lửa-mà-ai-cũng-biết-là-lửa-gì)
+--max-pages <MAX_PAGES>: quyết định bao nhiêu trang sẽ được crawl.
+```
 
 Ở đây mình sẽ dùng --browser chrome(Mê chrome đó giờ các ông ạ), các bạn mở terminal lên rồi chạy command
 
-    ```sh
-    python udemy_enroller.py --browser chrome
-    ```
+```sh
+python udemy_enroller.py --browser chrome
+```
 
 Sau khi run thì nó sẽ yêu cầu các bạn nhập tài khoản udemy của mình vào(Ông nào sợ cứ việc tạo hẳn cái account mới rồi test cho an toàn, khỏi nghĩ ngợi, khỏe nữa).
 
