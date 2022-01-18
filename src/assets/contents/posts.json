@@ -1,20 +1,11 @@
 [
   {
-    "name": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "name": "Tôi đã enroll các khóa học trên Udemy một cách TỰ ĐỘNG như thế nào",
     "id": 0,
-    "slug": "lorem-ipsum",
-    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    "categoryId": 1,
-    "createdAt": 1639638586000,
-    "imageUrl": "https://image.freepik.com/free-vector/people-with-technology-devices_52683-34717.jpg"
-  },
-  {
-    "name": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    "id": 1,
-    "slug": "lorem-ipsum-amet",
-    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "slug": "toi-da-enroll-cac-khoa-hoc-tren-udemy-mot-cach-tu-dong-nhu-the-nao",
+    "description": "Chắc hẳn cái tên Udemy.com có vẻ như còn khá xa lạ đối với chúng ta nhưng đây lại là Website học trực tuyến có hơn 20 triệu người dùng trên toàn thế giới. Các khoá học trên Udemy bao gồm miễn phí và trả phí, bài viết này mình sẽ hướng dẫn các bạn sử dụng tool tự động tìm và enroll các khoá học miễn phí nhé!",
     "categoryId": 0,
-    "createdAt": 1639577335000,
-    "imageUrl": "https://image.freepik.com/free-vector/young-people-jumping-together-illustration_52683-27019.jpg"
+    "createdAt": 1642507711000,
+    "imageUrl": "https://image.freepik.com/free-vector/people-with-technology-devices_52683-34717.jpg"
   }
 ]

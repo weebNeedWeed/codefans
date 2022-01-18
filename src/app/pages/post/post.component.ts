@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Post } from '../../models/Post.model';
 import { Converter } from 'showdown';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-post',
@@ -19,7 +20,8 @@ export class PostComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private contentService: ContentService
+    private contentService: ContentService,
+    private titleService: Title
   ) {}
 
   ngOnInit(): void {
@@ -39,6 +41,10 @@ export class PostComponent implements OnInit {
             this.router.navigate(['404']);
             return;
           }
+
+          this.titleService.setTitle(
+            `CodeFans - Technical Blog - ${data.name}`
+          );
 
           this.createdAt = data.createdAt;
           this.postTitle = data.name;
