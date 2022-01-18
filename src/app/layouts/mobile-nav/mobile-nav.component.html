@@ -11,23 +11,23 @@
   <div class="nav__box" [class.nav__box--active]="show">
     <ul class="nav__menu">
       <li class="nav__menu-item">
-        <a routerLink="/" class="nav__link">Trang chủ</a>
+        <a routerLink="/" class="nav__link" (click)="onClickRouterLink()">Trang chủ</a>
         <div class="nav__underline"></div>
       </li>
       <li class="nav__menu-item">
-        <a routerLink="/" class="nav__link">Tìm kiếm</a>
+        <a routerLink="/" class="nav__link" (click)="onClickRouterLink()">Tìm kiếm</a>
         <div class="nav__underline"></div>
       </li>
       <li class="nav__menu-item">
-        <a routerLink="/" class="nav__link">Hướng dẫn</a>
+        <a routerLink="/" class="nav__link" (click)="onClickRouterLink()">Hướng dẫn</a>
         <div class="nav__underline"></div>
       </li>
       <li class="nav__menu-item">
-        <a routerLink="/" class="nav__link">Về tác giả</a>
+        <a routerLink="/" class="nav__link" (click)="onClickRouterLink()">Về tác giả</a>
         <div class="nav__underline"></div>
       </li>
       <li class="nav__menu-item">
-        <a routerLink="/posts" class="nav__button">Bài viết</a>
+        <a routerLink="/posts" class="nav__button" (click)="onClickRouterLink()">Bài viết</a>
       </li>
     </ul>
   </div>

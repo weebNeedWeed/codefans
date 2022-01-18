@@ -7,13 +7,18 @@ import { Component, HostListener } from '@angular/core';
 })
 export class MobileNavComponent {
   show: boolean = false;
-  onClick() {
-    this.show = !this.show;
-  }
 
   isScrollingDown: boolean = false;
 
   private oldScrollY: number = 0;
+
+  onClickRouterLink() {
+    this.show = false;
+  }
+
+  onClick() {
+    this.show = !this.show;
+  }
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
