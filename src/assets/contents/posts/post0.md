@@ -74,6 +74,6 @@ Nếu udemy buộc mình phải solve captcha thì bạn cứ bình tĩnh, xử 
 # 3. Kết
 
 Mình cảm ơn các bạn đã đọc bài viết này, thật sự là lần đầu mình viết nên đọc sẽ có chút sượng ạ, mong mọi người góp ý, đồng thời mọi người có thắc mắc gì thì cứ comment mình sẽ giải đáp hoặc tham khảo link này ạ:
-`https://github.com/aapatre/Automatic-Udemy-Course-Enroller-GET-PAID-UDEMY-COURSES-for-FREE`
+https://github.com/aapatre/Automatic-Udemy-Course-Enroller-GET-PAID-UDEMY-COURSES-for-FREE
 
 ## Chúc các bạn thành công

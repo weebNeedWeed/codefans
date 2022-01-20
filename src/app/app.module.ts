@@ -1,3 +1,4 @@
+import { SafeHtmlPipe } from './pipes/safe-html.pipe';
 import { IconsModule } from './icons.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -26,6 +27,7 @@ import { MobileNavComponent } from './layouts/mobile-nav/mobile-nav.component';
     BoxComponent,
     CardComponent,
     LocaleDatePipe,
+    SafeHtmlPipe,
     FooterComponent,
     ProgressBarComponent,
     MobileNavComponent,

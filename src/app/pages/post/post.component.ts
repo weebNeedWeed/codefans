@@ -2,8 +2,15 @@ import { ContentService } from './../../services/content.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Post } from '../../models/Post.model';
-import { Converter } from 'showdown';
 import { Title } from '@angular/platform-browser';
+import * as MarkdownIt from 'markdown-it';
+
+const cssCodeBlock = `<style>pre{word-wrap:break-word;overflow:auto;background:#fafafa none repeat scroll 0% 0%;width:100%;border-radius:2px;white-space:pre-wrap;}
+pre code{display:block;background:transparent;border:medium none;color:#888;padding:20px;font-family:Inconsolata,Menlo,Consolas,Monaco,monospace;white-space:pre;overflow:auto;}
+code .token.important{font-weight:normal;}
+code .token.entity{cursor:help;}
+pre mark,code mark,pre code mark{background-color:#5580e4;color:#fff!important;padding:2px;margin:0 2px;border-radius:2px;}
+pre::before{content:'</>';padding:12px 20px;color:#FFF;display:block;text-indent:15px;background:#03a9f4 none repeat scroll 0% 0%;font-family:Inconsolata;font-weight:400;}</style>`;
 
 @Component({
   selector: 'app-post',
@@ -53,15 +60,22 @@ export class PostComponent implements OnInit {
 
           this.contentService
             .getPostContent(postId)
-            .subscribe((data: string) => {
-              if (!data) {
+            .subscribe((markdownData: string) => {
+              if (!markdownData) {
                 this.router.navigate(['404']);
                 return;
               }
 
-              const converter: Converter = new Converter();
+              var remark = new MarkdownIt({
+                html: true,
+                linkify: true,
+                typographer: true,
+                highlight: (str: string) => {
+                  return cssCodeBlock + str;
+                },
+              });
 
-              const html: string = converter.makeHtml(data);
+              const html: string = remark.render(markdownData);
 
               this.postContent = html;
             });
