@@ -1,6 +1,4 @@
-# Tôi đã enroll các khóa học trên Udemy một cách TỰ ĐỘNG như thế nào
-
-## 1. Giới thiệu
+# 1. Giới thiệu
 
 ### 1.1 Udemy là gì ?
 
@@ -10,7 +8,7 @@ Chắc hẳn cái tên Udemy.com có vẻ như còn khá xa lạ đối với ch
 
 Ở đây mình sẽ dùng một repo trên github được một anh Ấn độ viết sẵn, các bạn có thể tham khảo tại đây, tiện tay +1 star cho ông ấy nhé.
 
-## 2. Set up
+# 2. Set up
 
 ### 2.1 Nguyên lý hoạt động
 
@@ -38,7 +36,8 @@ Các bạn chờ tí cho nó tải. Sau khi install xong, các bạn quan tâm c
 Thực ra nhớ tên trình duyệt là được, không cần quan tâm mấy kia lắm đâu.
 Cài đặt các thứ xong cả rồi, giờ tận hưởng thành quả thôi chứ gì nữa.
 
-2.3 Chạy chương trình
+### 2.3 Chạy chương trình
+
 Các bạn mở terminal lên rồi chạy lệnh
 
 ```sh
@@ -72,7 +71,7 @@ Option cuối cùng nhằm mục đích save lại config cho ta dùng về sau,
 
 Nếu udemy buộc mình phải solve captcha thì bạn cứ bình tĩnh, xử lý cái captcha đấy là chạy tiếp được ngay ấy mà.
 
-## 3. Kết
+# 3. Kết
 
 Mình cảm ơn các bạn đã đọc bài viết này, thật sự là lần đầu mình viết nên đọc sẽ có chút sượng ạ, mong mọi người góp ý, đồng thời mọi người có thắc mắc gì thì cứ comment mình sẽ giải đáp hoặc tham khảo link này ạ:
 `https://github.com/aapatre/Automatic-Udemy-Course-Enroller-GET-PAID-UDEMY-COURSES-for-FREE`
