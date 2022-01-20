@@ -1,4 +1,4 @@
-import { IconsModule } from './icons/icons.module';
+import { IconsModule } from './icons.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
