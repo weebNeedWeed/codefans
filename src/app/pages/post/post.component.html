@@ -3,7 +3,7 @@
 
   <div class="row justify-content-md-center" #start>
     <div class="col-12 col-lg-9 col-sm-12 mb-5">
-      <app-box [title]="'Admin' + ' - ' + (createdAt | localeDate)">
+      <app-box [title]="category + ' - ' + (createdAt | localeDate)">
         <div class="post-content" [innerHtml]="postContent | safeHtml">
         </div>
       </app-box>

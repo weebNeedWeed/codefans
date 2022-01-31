@@ -2,7 +2,7 @@ export interface Post {
   name: string;
   slug: string;
   description: string;
-  categoryId: number;
+  categoryId: string;
   createdAt: number;
   imageUrl: string;
   id: string;

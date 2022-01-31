@@ -1,3 +1,4 @@
+import { Category } from './../../models/Category.model';
 import { ContentService } from './../../services/content.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
@@ -14,6 +15,7 @@ export class PostComponent implements OnInit {
   createdAt: number = 0;
   postTitle: string = '';
   postContent: string = '';
+  category: string = '';
 
   private currentCodeBlockIndex: number = -1;
   private codeList: string[] = [];
@@ -77,6 +79,14 @@ export class PostComponent implements OnInit {
 
           this.createdAt = data.createdAt;
           this.postTitle = data.name;
+
+          this.contentService
+            .getAllCategories()
+            .subscribe((categories: Array<Category>) => {
+              this.category = categories.find(
+                (category: Category) => category.id === data.categoryId
+              )!.name;
+            });
 
           const postId: string = data.id;
 
