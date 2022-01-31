@@ -78,7 +78,7 @@ export class PostComponent implements OnInit {
           this.createdAt = data.createdAt;
           this.postTitle = data.name;
 
-          const postId: number = data.id;
+          const postId: string = data.id;
 
           this.contentService.getPostContent(postId).subscribe({
             next: (markdownData: string) => {

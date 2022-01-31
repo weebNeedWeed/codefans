@@ -1,3 +1,4 @@
+import { Category } from './../models/Category.model';
 import { Post } from './../models/Post.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -10,10 +11,8 @@ import { map } from 'rxjs/operators';
 export class ContentService {
   constructor(private http: HttpClient) {}
 
-  getAllCategories(): Observable<Array<{ name: string; id: string }>> {
-    return this.http.get<Array<{ name: string; id: string }>>(
-      'assets/contents/categories.json'
-    );
+  getAllCategories(): Observable<Array<Category>> {
+    return this.http.get<Array<Category>>('assets/contents/categories.json');
   }
 
   getAllPosts(): Observable<Array<Post>> {
@@ -33,7 +32,7 @@ export class ContentService {
     );
   }
 
-  getPostContent(id: number): Observable<string> {
+  getPostContent(id: string): Observable<string> {
     return this.http.get('assets/contents/posts/post' + id + '.md', {
       responseType: 'text',
     });
