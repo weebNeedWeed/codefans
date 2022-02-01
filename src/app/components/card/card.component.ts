@@ -1,5 +1,7 @@
+import { Category } from './../../models/Category.model';
 import { Component, Input, OnInit } from '@angular/core';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
+import { ContentService } from '../../services/content.service';
 
 @Component({
   selector: 'app-card',
@@ -25,11 +27,19 @@ export class CardComponent implements OnInit {
   @Input()
   isLast: boolean = false;
 
+  @Input()
+  categoryId: string = '0';
+
   styles: any = {};
 
   isMobile: boolean = false;
 
-  constructor(public breakpointObserver: BreakpointObserver) {}
+  categoryName: string = '';
+
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    private contentService: ContentService
+  ) {}
 
   ngOnInit(): void {
     this.styles.image = {
@@ -46,6 +56,14 @@ export class CardComponent implements OnInit {
         this.styles.card = {
           'margin-bottom': !this.isLast ? (state.matches ? '10px' : '30px') : 0,
         };
+      });
+
+    this.contentService
+      .getCategoryById(this.categoryId)
+      .subscribe((category: Category | undefined) => {
+        if (category) {
+          this.categoryName = category!.name;
+        }
       });
   }
 }

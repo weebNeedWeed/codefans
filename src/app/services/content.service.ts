@@ -37,4 +37,14 @@ export class ContentService {
       responseType: 'text',
     });
   }
+
+  getCategoryById(id: string): Observable<Category | undefined> {
+    return this.getAllCategories().pipe(
+      map<Array<Category> | undefined, Category | undefined>(
+        (categories: Array<Category> | undefined) => {
+          return categories?.find((category: Category) => category.id === id);
+        }
+      )
+    );
+  }
 }

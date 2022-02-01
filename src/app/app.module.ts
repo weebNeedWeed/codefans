@@ -1,3 +1,4 @@
+import { GridBoxComponent } from './components/grid-box/grid-box.component';
 import { SafeHtmlPipe } from './pipes/safe-html.pipe';
 import { IconsModule } from './icons.module';
 import { NgModule } from '@angular/core';
@@ -31,6 +32,7 @@ import { MobileNavComponent } from './layouts/mobile-nav/mobile-nav.component';
     FooterComponent,
     ProgressBarComponent,
     MobileNavComponent,
+    GridBoxComponent,
   ],
   imports: [
     BrowserModule,

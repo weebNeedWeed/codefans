@@ -1,15 +1,11 @@
 <div class="wrapper">
   <h2 class="post-title">{{postTitle}}</h2>
 
-  <div class="row justify-content-md-center" #start>
-    <div class="col-12 col-lg-9 col-sm-12 mb-5">
-      <app-box [title]="category + ' - ' + (createdAt | localeDate)">
-        <div class="post-content" [innerHtml]="postContent | safeHtml">
-        </div>
-      </app-box>
-    </div>
-    <div class="col-12 col-lg-3 col-sm-12">
-      <app-box title="Coming soon"></app-box>
-    </div>
-  </div>
+  <app-grid-box>
+    <app-box [title]="categoryName + ' - ' + (createdAt | localeDate)">
+      <div class="post-content" [innerHtml]="postContent | safeHtml">
+      </div>
+    </app-box>
+  </app-grid-box>
+
 </div>

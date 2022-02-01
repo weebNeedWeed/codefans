@@ -1,12 +1,11 @@
-<div class="row justify-content-md-center wrapper">
-  <div class="col-12 col-lg-9 col-sm-12 mb-5">
+<div class="wrapper">
+
+  <app-grid-box>
     <app-box title="Mới nhất">
       <app-card *ngFor="let post of newestPosts" [title]="post.name" [description]="post.description"
-        [imageUrl]="post.imageUrl" [createdAt]="post.createdAt" [slug]="post.slug">
+        [imageUrl]="post.imageUrl" [createdAt]="post.createdAt" [slug]="post.slug" [categoryId]="post.categoryId">
       </app-card>
     </app-box>
-  </div>
-  <div class="col-12 col-lg-3 col-sm-12">
-    <app-box title="Coming soon"></app-box>
-  </div>
+  </app-grid-box>
+
 </div>

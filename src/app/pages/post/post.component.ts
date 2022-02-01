@@ -15,7 +15,7 @@ export class PostComponent implements OnInit {
   createdAt: number = 0;
   postTitle: string = '';
   postContent: string = '';
-  category: string = '';
+  categoryName: string = '';
 
   private currentCodeBlockIndex: number = -1;
   private codeList: string[] = [];
@@ -83,7 +83,7 @@ export class PostComponent implements OnInit {
           this.contentService
             .getAllCategories()
             .subscribe((categories: Array<Category>) => {
-              this.category = categories.find(
+              this.categoryName = categories.find(
                 (category: Category) => category.id === data.categoryId
               )!.name;
             });
