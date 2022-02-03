@@ -81,18 +81,19 @@ export class HeaderComponent implements OnInit {
 
   onClick() {
     const offsetTop = this.scrollTo.offsetTop - 120;
+    const currentOffsetTop = window.scrollY;
 
     const smoothScroll = (top: number) => {
       if (top >= offsetTop) {
         return;
       } else {
         setTimeout(() => {
-          window.scrollTo(0, top);
+          window.scrollTo(currentOffsetTop, top);
           smoothScroll(top + 6);
         }, 1);
       }
     };
 
-    smoothScroll(1);
+    smoothScroll(currentOffsetTop);
   }
 }

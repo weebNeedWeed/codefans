@@ -24,6 +24,9 @@ export class AppComponent implements OnInit {
     private breakpointObserver: BreakpointObserver
   ) {}
 
+  /**
+   * * Handle router navigation event to make progress bar
+   */
   ngOnInit(): void {
     this.router.events.subscribe((event: Event) => {
       switch (true) {
@@ -35,6 +38,9 @@ export class AppComponent implements OnInit {
         case event instanceof NavigationCancel:
         case event instanceof NavigationEnd:
         case event instanceof NavigationError: {
+          // Scroll to y = 0 when navigate to new page
+          window.scrollTo(0, 0);
+
           setTimeout(() => {
             this.progressBarService.setStatus(false);
           }, 2000);
