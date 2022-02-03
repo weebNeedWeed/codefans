@@ -81,11 +81,11 @@ export class PostComponent implements OnInit {
           this.postTitle = data.name;
 
           this.contentService
-            .getAllCategories()
-            .subscribe((categories: Array<Category>) => {
-              this.categoryName = categories.find(
-                (category: Category) => category.id === data.categoryId
-              )!.name;
+            .getCategoryById(data.categoryId)
+            .subscribe((category: Category | undefined) => {
+              if (category) {
+                this.categoryName = category.name;
+              }
             });
 
           const postId: string = data.id;
