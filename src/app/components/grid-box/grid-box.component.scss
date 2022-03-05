@@ -1,0 +1,18 @@
+@import "./../../theme";
+
+.feedback-submit-button {
+  width: min(100%, 300px);
+  background-color: $blue3;
+  border: none;
+  border-radius: 6px;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all .2s;
+  display: block;
+  margin: 0 auto;
+
+  &:hover {
+    background-color: rgba($blue3, 0.7)
+  }
+}

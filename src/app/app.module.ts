@@ -1,8 +1,9 @@
 import { GridBoxComponent } from './components/grid-box/grid-box.component';
 import { SafeHtmlPipe } from './pipes/safe-html.pipe';
-import { IconsModule } from './icons.module';
+import { AppIconsModule } from './app-icons.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -40,8 +41,9 @@ import { MobileNavComponent } from './layouts/mobile-nav/mobile-nav.component';
     BrowserAnimationsModule,
     NgbModule,
     HttpClientModule,
-    IconsModule,
+    AppIconsModule,
     LayoutModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

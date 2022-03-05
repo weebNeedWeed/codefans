@@ -9,4 +9,4 @@ const icons = { ArrowClockwise, List };
   imports: [BootstrapIconsModule.pick(icons)],
   exports: [BootstrapIconsModule],
 })
-export class IconsModule {}
+export class AppIconsModule {}
